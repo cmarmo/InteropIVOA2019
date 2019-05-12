@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+	<link rel="stylesheet" href="css/theme/beige.css" id="theme">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -151,7 +151,7 @@
 					<h3>keywords for linear WCS</h3>
 					<p class="fragment fade-in-then-semi-out">Alternate WCS description available in FITS</p>
                 	                <p class="fragment fade-in-then-semi-out">Need of CTYPE standardization (Coordinate types - projection type)</p>
-                	                <p class="fragment fade-in-then-semi-out">For angular coordinates xLON xLAT or yzLN yzLT, where x or yz correspond to the target body.</p>
+                	                <p class="fragment fade-in-then-semi-out">For angular coordinates the standard says xLON xLAT or yzLN yzLT, where x or yz correspond to the target body.</p>
                 	                <p class="fragment fade-in-then-semi-out">For projected coordinates in meters : yzPX as Projected X yzPY as Projected Y. </p>
 					<footer class="logo"></footer>
 				</section>
@@ -224,35 +224,115 @@
 					</small>
 					<footer class="logo"></footer>
 				</section>
+				<section data-transition="fade">
+					<div class="logos"></div>
+					<h3>Projection codes</h3>
+					<small>
+					<table>
+					<thead>
+						<tr>
+						<th>FITS Name</th>
+						<th>FITS Code</th>
+						<th>PDS4 Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<td>Zenithal Equidistant</td>
+						<td>ARC</td>
+						<td>Azimuthal Equidistant</td>
+						</tr>
+						<tr>
+						<td>Zenithal Perspective</td>
+						<td>AZP</td>
+						<td>General Vertical Near‐sided Projection</td>
+						</tr>
+						<tr>
+						<td>Plate Carre</td>
+						<td>CAR</td>
+						<td>Equirectangular, Miller Cylindrical</td>
+						</tr>
+						<tr>
+						<td>Equidistant Conic</td>
+						<td>COD</td>
+						<td>Equidistant Conic</td>
+						</tr>
+						<tr>
+						<td>Conic Equal‐Area</td>
+						<td>COE</td>
+						<td>Albers Conical Equal Area</td>
+						</tr>
+						<tr>
+						<td>Conic Ortomorphic</td>
+						<td>COO</td>
+						<td>Lambert Conformal Conic</td>
+						</tr>
+						<tr>
+						<td>Mercator</td>
+						<td>MER</td>
+						<td>Mercator, Oblique Mercator, Transverse Mercator</td>
+						</tr>
+						<tr>
+						<td>Polyconic</td>
+						<td>PCO</td>
+						<td>Polyconic</td>
+						</tr>
+						<tr>
+						<td>Sanson‐Flamsteed</td>
+						<td>SFL</td>
+						<td>Sinusoidal</td>
+						</tr>
+						<tr>
+						<td>Ortographic</td>
+						<td>SIN</td>
+						<td>Orthographic</td>
+						</tr>
+						<tr>
+						<td>Stereographic</td>
+						<td>STG</td>
+						<td>Stereographic, Polar Stereographic</td>
+						</tr>
+						<tr>
+						<td>Gnomonic</td>
+						<td>TAN</td>
+						<td>Gnomonic</td>
+						</tr>
+						<tr>
+						<td>Zenithal Equal‐Area</td>
+						<td>ZEA</td>
+						<td>Lambert Azimuthal Equal Area</td>
+						</tr>
+					</tbody>
+					</table>
+					</small>
+					<footer class="logo"></footer>
+				</section>
 			</section>
 
 			<section data-transition="fade">
 				<div class="logos"></div>
 				<h3>FITS to PDS keyword mapping</h3>
+                                <h4><a href="https://doi.org/10.1029/2018EA000388">https://doi.org/10.1029/2018EA000388</a></h4>
+				<table><tr>
+				<td><img src="images/fitspds4.png" alt="FITS Format for Planetary Surfaces: Definitions, Applications, and Best Practices" title="FITS Format for Planetary Surfaces: Definitions, Applications, and Best Practices"></td>
+				<td><img src="images/fitspds4-2.png" alt="FITS Format for Planetary Surfaces: Definitions, Applications, and Best Practices" title="FITS Format for Planetary Surfaces: Definitions, Applications, and Best Practices"></td>
+				</tr></table>
 				<footer class="logo"></footer>
 			</section>
 
-			<section data-transition="fade">
+			<section data-transition="fade" data-background="images/qgis4fits.jpg" style="font-color: white;">
 				<div class="logos"></div>
 				<h3>FITS GIS interoperability</h3>
+					<p>Planetary WCS implementation in GDAL - Geospatial Data Abstraction Library: done in GDAL V3.0</p>
 					<footer class="logo"></footer>
 			</section>
 			<section data-transition="fade">
-						<div class="logos"></div>
-						<h3>HiRISE</h3>
-						<img src="images/mefccd.png" alt="Mosaic MEF scheme" title="Mosaic MEF scheme">
-						<img style="float: right" src="images/hirisemosaic.jpeg" alt="Mosaic MEF view" title="Mosaic MEF view">
-						<footer class="logo"></footer>
-			</section>
-			<section data-transition="fade">
-					<div class="logos"></div>
-					<h3>Multi Extension FITS conversion</h3>
-					<p>Some example scripts are available at<br />
-					<a href="https://github.com/cmarmo/convertofits" target="_blank">https://github.com/cmarmo/convertofits</a></p>
-					<p>Do you have exotic formats worth converting to FITS?</p>
-					<p>Let me know!</p>
-					<p class="fragment" style="color: red">Thanks for listening!</p>
-					<footer class="logo"></footer>
+				<div class="logos"></div>
+				<h3>Planetary Data FITS conversion</h3>
+				<p>Some example scripts are available at<br />
+				<a href="https://github.com/cmarmo/convertofits" target="_blank">https://github.com/cmarmo/convertofits</a></p>
+				<p class="fragment" style="color: brown">Thanks for listening!</p>
+				<footer class="logo"></footer>
 			</section>
 		</div>
 

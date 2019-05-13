@@ -42,12 +42,14 @@
 		<div class="slides">
 
 			<section>
+			<div class="logos"></div>
 			<h2>GeoFITS</h2>
 			<h3>a planetary surface extension for FITS metadata</h3>
 				<p>
 					Chiara Marmo et al.
 				</p>
-				<p><small>(in the VESPA EUROPLANET 2020 collaboration)</small></p>
+				<p><small>in the VESPA EUROPLANET 2020 collaboration</small></p>
+				<p><small>in collaboration with the USGS Astrogeology Center (Trent Hare)</small></p>
 				<footer class="logo"></footer>
 			</section>
 
@@ -68,7 +70,7 @@
 				<h3>Does FITS fit Planetary Science?</h3>
 				<ul>
 					<li class="fragment">Compatible with PDS (version 3 and 4) archiving constraints</li>
-					<li class="fragment">Ready for multi-digital objects (using MUlti Extension FITS)</li>
+					<li class="fragment">Ready for multi-digital objects (using Multi Extension FITS)</li>
 					<li class="fragment">Open Source, stable processing libraries (e.g. CFITSIO, astropy, ...)</li>
 					<li class="fragment">Efficient and well standardised World Coordinate System description (but for 3D systems)</li>
 				</ul>
@@ -149,11 +151,13 @@
 				<section data-transition="fade">
 					<div class="logos"></div>
 					<h3>keywords for linear WCS</h3>
+					<small>
 					<p class="fragment fade-in-then-semi-out">Alternate WCS description available in FITS</p>
-                	                <p class="fragment fade-in-then-semi-out">Need of CTYPE standardization (Coordinate types - projection type)</p>
-                	                <p class="fragment fade-in-then-semi-out">For angular coordinates the standard says xLON xLAT or yzLN yzLT, where x or yz correspond to the target body.</p>
-                	                <p class="fragment fade-in-then-semi-out">For projected coordinates in meters : yzPX as Projected X yzPY as Projected Y. </p>
-					<footer class="logo"></footer>
+                	<p class="fragment fade-in-then-semi-out">Need of CTYPE standardization (Coordinate types - projection type)</p>
+                	<p class="fragment fade-in-then-semi-out">For angular coordinates the standard says xLON xLAT or yzLN yzLT, where x or yz correspond to the target body.</p>
+                	<p class="fragment fade-in-then-semi-out">For projected coordinates in meters : yzPX as Projected X yzPY as Projected Y. </p>
+					</small>
+									<footer class="logo"></footer>
 				</section>
 				<section data-transition="fade">
 					<div class="logos"></div>
@@ -320,16 +324,30 @@
 				<footer class="logo"></footer>
 			</section>
 
-			<section data-transition="fade" data-background="images/qgis4fits.jpg" style="font-color: white;">
+			<section data-transition="fade" data-background="images/qgis4fits.jpg" style="color: white;">
 				<div class="logos"></div>
-				<h3>FITS GIS interoperability</h3>
+				<h3 style="color: white;">FITS GIS interoperability</h3>
 					<p>Planetary WCS implementation in GDAL - Geospatial Data Abstraction Library: done in GDAL V3.0</p>
 					<footer class="logo"></footer>
 			</section>
+
+			<section data-transition="fade">
+				<div class="logos"></div>
+				<h3>Todos</h3>
+					<ul>
+					<li>Planetary WCS implementation in WCSlib (and astropy?)</li>
+					<li>Planetary WCS extension in IAU FITS standard</li>
+					<li>Planetary WCS extension as IVOA standard</li>
+					</ul>
+					<footer class="logo"></footer>
+			</section>
+
 			<section data-transition="fade">
 				<div class="logos"></div>
 				<h3>Planetary Data FITS conversion</h3>
-				<p>Some example scripts are available at<br />
+				<p>References are available at<br />
+				<a href="https://epn-vespa.github.io/geofits/#publications" target="_blank">https://epn-vespa.github.io/geofits/#publications</a></p>
+				<p>Example scripts are available at<br />
 				<a href="https://github.com/cmarmo/convertofits" target="_blank">https://github.com/cmarmo/convertofits</a></p>
 				<p class="fragment" style="color: brown">Thanks for listening!</p>
 				<footer class="logo"></footer>
